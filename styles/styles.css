@@ -119,9 +119,10 @@ body {
     }
     .bs-sidebar.affix-bottom,
     .bs-sidebar.affix {
-        width: 263px;
+        width: 160px;
     }
 }
+
 
 /* resizing */
 
@@ -129,7 +130,15 @@ body {
     .bs-site-container {
         margin-top: 50px;
     }
+    .bs-sidebar.affix-bottom,
+    .bs-sidebar.affix {
+        width: 130px;
+    }
+    .detalhe-leilao .jumbotron#header-detalhes-leilao .thumbnail {
+        width: 100%;
+    }
 }
+
 
 /* Portrait tablet to landscape and desktop */
 
@@ -137,13 +146,14 @@ body {
     .bs-site-container {
         margin-top: 100px;
     }
-    
     body {
         margin-bottom: 340px;
     }
-    
     footer {
         height: 320px;
+    }
+    .detalhe-leilao .jumbotron#header-detalhes-leilao .thumbnail {
+        width: inherit;
     }
 }
 
@@ -154,7 +164,6 @@ body {
     .bs-site-container {
         margin-top: 0px;
     }
-    
     body {
         margin-bottom: 350px;
     }
@@ -170,6 +179,9 @@ body {
     .bs-footer p {
         margin-bottom: 0;
     }
+    .detalhe-leilao .jumbotron#header-detalhes-leilao .thumbnail {
+        width: inherit;
+    }
 }
 
 
@@ -179,6 +191,10 @@ body {
     .bs-site-container {
         margin-top: 0px;
     }
+}
+
+.leilao-call {
+    margin: 0 0 15px 0;
 }
 
 .leilao-call h3 {
@@ -247,4 +263,118 @@ footer {
 .bs-footer p a {
     font-weight: bold;
     color: #d2d2d2;
+}
+
+.carrossel-destaques {
+    margin-bottom: 15px;
+}
+
+.carrossel-destaques .thumbnail {
+    margin-bottom: 0;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none !important;
+}
+
+.carousel-control {
+    top: 40%;
+    color: #428BCA;
+    bottom: auto;
+    padding-top: 4px;
+    width: 30px;
+    height: 30px;
+    text-shadow: none;
+    opacity: 1;
+}
+
+.carousel-control:hover {
+    color: #716B7A;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none !important;
+}
+
+.carousel-control.right {
+    left: auto;
+    right: 0px;
+}
+
+.carousel-control.left {
+    right: auto;
+    left: 0px;
+}
+
+.carrossel-destaques .row {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.status-leilao {
+    width: 100%;
+    padding: 3px 0;
+    margin: 0;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.status-leilao.status-aberto {
+    color: #fff;
+    background: #5ba840;
+}
+
+.status-leilao.status-andamento {
+    color: #fff;
+    background: #d68028;
+}
+
+.status-leilao.status-encerrado {
+    color: #fff;
+    background: #d23c3c;
+}
+
+.carrossel-destaques .caption h4 {
+    margin: 0 0 5px 0;
+}
+
+.carrossel-destaques .favoritado {
+    color: gold;
+}
+
+.detalhe-leilao {
+    padding: 10px;
+}
+
+.detalhe-leilao>h1 {
+    padding: 0 0px 15px 35px;
+    margin: 0;
+    color: #445f64;
+    font-weight: 600;
+}
+
+.detalhe-leilao .jumbotron#header-detalhes-leilao {
+    padding: 10px 20px 0px 20px;
+}
+
+.detalhe-leilao .jumbotron#header-detalhes-leilao .row {
+    margin-bottom: 15px;
+}
+
+.detalhe-leilao .jumbotron#header-detalhes-leilao p {
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+.detalhe-leilao .pagination {
+    margin: 0;
+}
+
+.dropdown .dropdown-menu a.active {
+    background-color: #428BCA;
+    color: #fff;
 }

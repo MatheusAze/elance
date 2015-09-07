@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>e-Lance.co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de leilões on-line">
+    <meta name="author" content="e-Lance.co">
+    <!-- Le styles -->
+    <link rel="stylesheet" type="text/css" href="dist/css/metro-bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/font-awesome.min.css">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- eLance styles -->
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top bsnavbar">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/e-lance.png" alt="e-Lance" />
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <!-- li  class="active" -->
+                        <li><a href="#">Minha Conta</a></li>
+                        <li><a href="#">Como Participar</a></li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Atendimento <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+
+                    <form class="navbar-form navbar-left" role="search">
+
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Faça sua busca">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Buscar</button>
+                          </span>
+                        </div>
+
+                        <!--
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <button type="submit" class="btn btn-default"></button>
+-->
+                    </form>
+
+                    <ul class="nav navbar-nav">
+                        <!-- li  class="active" -->
+                        <li><a href="#">Cadastre-se</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entrar <b class="caret"></b></a>
+                            <ul class="dropdown-menu" style="min-width: 240px;">
+                                <li>
+                                    <form class="navbar-form navbar-left" role="login" style="width: 100%; margin: auto;">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                  <i class="fa fa-fw fa-user"></i>
+                              </span>
+                                            <input type="text" class="form-control" placeholder="Login">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-fw fa-key"></i>
+                                            </span>
+                                            <input type="password" class="form-control" placeholder="Senha">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary navbar-right">Entrar <i class="fa fa-sign-in"></i></button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container bs-site-container">
+        <div class="row">
+            <div class="col-md-2">
+
+                <div class="bs-sidebar hidden-print affix bg-conteudo" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li>
+                            <a href="index.html">Leilões</a>
+                            <ul class="nav">
+                                <li><a href="#"><i class="fa fa-fw fa-1x fa-car"></i> Veiculos</a></li>
+                                <li><a href="#"><i class="fa fa-fw fa-1x fa-home"></i> Imóveis</a></li>
+                                <li><a href="#"><i class="fa fa-fw fa-1x fa-gear"></i> Materiais</a></li>
+                            </ul>
+                        </li>
+                        <li class="active">
+                            <a href="ultimos-lotes.html">Últimos Lotes</a>
+                        </li>
+                        <li>
+                            <a href="#btn-groups">Perfil</a>
+                        </li>
+                        <li>
+                            <a href="#btn-dropdowns">Dashboard</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10" role="main">
+                <!-- inicio conteudo -->
+
+                <div class="row">
+                    <div class="bg-conteudo leilao-call">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>&gt; Lotes em Destaque</h3></div>
+                        </div>
+                        <div class="row lista-leiloes">
+
+                            <div id="carrossel-destaques" class="carousel slide carrossel-destaques">
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/business" alt="Slide33">
+                                                    <div class="status-leilao status-aberto">Dê seu lance (Aberto)</div>
+                                                    <div class="caption">
+                                                        <h4><a href="lote.html">Apto Tucuruvi</a></h4>
+                                                        <p>Lance atual: R$ 250.000,00</p>
+                                                        <p>
+                                                            <a href="#" class="btn btn-primary" role="button">Lance: + R$ 2.000,00</a>
+                                                            <a href="#" class="btn btn-default" role="button"><i class="fa fa-star favoritado"></i></a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/cats" alt="Slide33">
+                                                    <div class="status-leilao status-andamento">Dê seu lance (Andamento)</div>
+                                                    <div class="caption">
+                                                        <h4><a href="lote.html">Brasilia Preta</a></h4>
+                                                        <p>Lance atual: R$ 50.000,00</p>
+                                                        <p>
+                                                            <a href="#" class="btn btn-primary" role="button">Lance: + R$ 500,00</a>
+                                                            <a href="#" class="btn btn-default" role="button"><i class="fa fa-star favoritado"></i></a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/animals" alt="Slide33">
+                                                    <div class="status-leilao status-aberto">Dê seu lance (Aberto)</div>
+                                                    <div class="caption">
+                                                        <h4><a href="lote.html">Limosine Branca</a></h4>
+                                                        <p>Lance atual: R$ 100.000,00</p>
+                                                        <p>
+                                                            <a href="#" class="btn btn-primary" role="button">Lance: + R$ 1.500,00</a>
+                                                            <a href="#" class="btn btn-default" role="button"><i class="fa fa-star"></i></a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/nature" alt="Slide33">
+                                                    <div class="status-leilao status-aberto">Dê seu lance (Aberto)</div>
+                                                    <div class="caption">
+                                                        <h4><a href="lote.html">Limosine Branca</a></h4>
+                                                        <p>Lance atual: R$ 100.000,00</p>
+                                                        <p>
+                                                            <a href="#" class="btn btn-primary" role="button">Lance: + R$ 1.500,00</a>
+                                                            <a href="#" class="btn btn-default" role="button"><i class="fa fa-star"></i></a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/people" alt="Slide33">
+                                                    <div class="status-leilao status-aberto">Dê seu lance (Aberto)</div>
+                                                    <div class="caption">
+                                                        <h4><a href="lote.html">Limosine Branca</a></h4>
+                                                        <p>Lance atual: R$ 100.000,00</p>
+                                                        <p>
+                                                            <a href="#" class="btn btn-primary" role="button">Lance: + R$ 1.500,00</a>
+                                                            <a href="#" class="btn btn-default" role="button"><i class="fa fa-star favoritado"></i></a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/city" alt="Slide33">
+                                                    <div class="status-leilao status-aberto">Dê seu lance (Aberto)</div>
+                                                    <div class="caption">
+                                                        <h4><a href="lote.html">Limosine Branca</a></h4>
+                                                        <p>Lance atual: R$ 100.000,00</p>
+                                                        <p>
+                                                            <a href="#" class="btn btn-primary" role="button">Lance: + R$ 1.500,00</a>
+                                                            <a href="#" class="btn btn-default" role="button"><i class="fa fa-star"></i></a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="left carousel-control" href="#carrossel-destaques" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
+                                <a class="right carousel-control" href="#carrossel-destaques" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
+                            </div>
+                            <!-- End Carousel -->
+
+                        </div>
+                        <!-- fim lista-leiloes -->
+                    </div>
+                    <!-- fim leilao-call -->
+                </div>
+                <!-- fim row -->
+
+                <div class="row">
+                    <div class="bg-conteudo leilao-call">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>&gt; Próximos Leilões</h3></div>
+                        </div>
+                        <div class="row lista-leiloes">
+
+                            <div id="carrossel-proximosleiloes" class="carousel slide carrossel-destaques">
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/business" alt="Slide33">
+                                                    <div class="status-leilao status-aberto">Dê seu lance (Aberto)</div>
+                                                    <div class="caption">
+                                                        <!-- TODO: rever informações para leilões. Lance atual e botões não fazem sentido -->
+                                                        <h4><a href="leilao.html">Leilão de imóveis</a></h4>
+                                                        <p>Lance atual: R$ 250.000,00</p>
+                                                        <p>
+                                                            <a href="#" class="btn btn-primary" role="button">Lance: + R$ 2.000,00</a>
+                                                            <a href="#" class="btn btn-default" role="button"><i class="fa fa-star favoritado"></i></a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/cats" alt="Slide33">
+                                                    <div class="status-leilao status-andamento">Dê seu lance (Andamento)</div>
+                                                    <div class="caption">
+                                                        <h4><a href="leilao.html">Leilão de automóveis</a></h4>
+                                                        <p>Lance atual: R$ 50.000,00</p>
+                                                        <p>
+                                                            <a href="#" class="btn btn-primary" role="button">Lance: + R$ 500,00</a>
+                                                            <a href="#" class="btn btn-default" role="button"><i class="fa fa-star favoritado"></i></a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/animals" alt="Slide33">
+                                                    <div class="status-leilao status-aberto">Dê seu lance (Aberto)</div>
+                                                    <div class="caption">
+                                                        <h4><a href="leilao.html">Leilão de materiais</a></h4>
+                                                        <p>Lance atual: R$ 100.000,00</p>
+                                                        <p>
+                                                            <a href="#" class="btn btn-primary" role="button">Lance: + R$ 1.500,00</a>
+                                                            <a href="#" class="btn btn-default" role="button"><i class="fa fa-star"></i></a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/nature" alt="Slide33">
+                                                    <div class="status-leilao status-aberto">Dê seu lance (Aberto)</div>
+                                                    <div class="caption">
+                                                        <h4><a href="leilao.html">Leilão de coisas</a></h4>
+                                                        <p>Lance atual: R$ 100.000,00</p>
+                                                        <p>
+                                                            <a href="#" class="btn btn-primary" role="button">Lance: + R$ 1.500,00</a>
+                                                            <a href="#" class="btn btn-default" role="button"><i class="fa fa-star"></i></a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/people" alt="Slide33">
+                                                    <div class="status-leilao status-aberto">Dê seu lance (Aberto)</div>
+                                                    <div class="caption">
+                                                        <h4><a href="leilao.html">Grande leilão</a></h4>
+                                                        <p>Lance atual: R$ 100.000,00</p>
+                                                        <p>
+                                                            <a href="#" class="btn btn-primary" role="button">Lance: + R$ 1.500,00</a>
+                                                            <a href="#" class="btn btn-default" role="button"><i class="fa fa-star favoritado"></i></a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/city" alt="Slide33">
+                                                    <div class="status-leilao status-aberto">Dê seu lance (Aberto)</div>
+                                                    <div class="caption">
+                                                        <h4><a href="leilao.html">Mais um leilão</a></h4>
+                                                        <p>Lance atual: R$ 100.000,00</p>
+                                                        <p>
+                                                            <a href="#" class="btn btn-primary" role="button">Lance: + R$ 1.500,00</a>
+                                                            <a href="#" class="btn btn-default" role="button"><i class="fa fa-star"></i></a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="left carousel-control" href="#carrossel-proximosleiloes" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
+                                <a class="right carousel-control" href="#carrossel-proximosleiloes" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
+                            </div>
+                            <!-- End Carousel -->
+
+                        </div>
+                        <!-- fim lista-leiloes -->
+                    </div>
+                    <!-- fim leilao-call -->
+                </div>
+                <!-- fim row -->
+
+                <div class="row">
+                    <div class="bg-conteudo leilao-call">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>&gt; Leilões Encerrados</h3></div>
+                        </div>
+                        <div class="row lista-leiloes">
+
+                            <div id="carrossel-encerrados" class="carousel slide carrossel-destaques">
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/business" alt="Slide33">
+                                                    <div class="status-leilao status-encerrado">Encerrado</div>
+                                                    <div class="caption">
+                                                        <h4><a href="leilao.html">Leilão Itaú</a></h4>
+                                                        <p>Encerrado em 26/08/2015</p>
+                                                        <p>Lotes vendidos: 52</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/cats" alt="Slide33">
+                                                    <div class="status-leilao status-encerrado">Encerrado</div>
+                                                    <div class="caption">
+                                                        <h4><a href="leilao.html">Leilão Bradesco</a></h4>
+                                                        <p>Encerrado em 31/08/2015</p>
+                                                        <p>Lotes vendidos: 17</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/animals" alt="Slide33">
+                                                    <div class="status-leilao status-encerrado">Encerrado</div>
+                                                    <div class="caption">
+                                                        <h4><a href="leilao.html">Leilão Santander</a></h4>
+                                                        <p>Encerrado em 03/09/2015</p>
+                                                        <p>Lotes vendidos: 36</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/nature" alt="Slide33">
+                                                    <div class="status-leilao status-encerrado">Encerrado</div>
+                                                    <div class="caption">
+                                                        <h4><a href="leilao.html">Leilão SABESP</a></h4>
+                                                        <p>Encerrado em 03/09/2015</p>
+                                                        <p>Lotes vendidos: 25</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/people" alt="Slide33">
+                                                    <div class="status-leilao status-encerrado">Encerrado</div>
+                                                    <div class="caption">
+                                                        <h4><a href="leilao.html">Leilão Eletropaulo</a></h4>
+                                                        <p>Encerrado em 05/09/2015</p>
+                                                        <p>Lotes vendidos: 45</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <img src="http://lorempixel.com/300/210/city" alt="Slide33">
+                                                    <div class="status-leilao status-encerrado">Encerrado</div>
+                                                    <div class="caption">
+                                                        <h4><a href="leilao.html">Leilão Volkswagen</a></h4>
+                                                        <p>Encerrado em 09/09/2015</p>
+                                                        <p>Lotes vendidos: 87</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="left carousel-control" href="#carrossel-encerrados" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
+                                <a class="right carousel-control" href="#carrossel-encerrados" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
+                            </div>
+                            <!-- End Carousel -->
+
+
+                        </div>
+                        <!-- fim lista-leiloes -->
+                    </div>
+                    <!-- fim leilao-call -->
+                </div>
+                <!-- fim row -->
+
+            </div>
+            <!-- fim conteudo -->
+        </div>
+
+
+
+
+
+
+
+        <!-- JS and analytics only. -->
+        <!-- Bootstrap core JavaScript
+================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/elance.js"></script>
+    </div>
+
+    <!-- Footer
+      ================================================== -->
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="container pre-footer bg-conteudo">
+                    <div class="col-md-1" role="main">
+
+                    </div>
+                    <div class="col-md-5" role="main">
+                        <div id="contato">
+                            <h4>Contato</h4>
+                            <p>elance@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-5" role="main">
+                        <div id="assine_newsletter">
+                            <h4>Por favor, insira um e-mail válido</h4>
+                            <form role="newsletter">
+                                <div class="input-group" id="form_newsletter">
+                                    <span class="input-group-addon"><i class="fa fa-fw fa-envelope"></i></span>
+                                    <input type="text" class="form-control" placeholder="E-mail">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary navbar-right">Assine agora</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-1" role="main">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bs-footer">
+            <p>&copy; 2015 by <a href="#e-lance" alt="e-Lance.co">e-Lance</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -3,14 +3,18 @@
  * DO NOT INCLUDE THIS ON YOUR APP.
  * ===================================================== */
 
-!function ($) {
+! function ($) {
 
-  $(function () {
+    $(function () {
 
-    $(":submit").click(function (e) {
-		e.preventDefault()
+        $(":submit").click(function (e) {
+            e.preventDefault()
+        });
+
+        $('.carrossel-destaques').carousel({
+            interval: false
+        });
+
     })
-	
-  })
 
 }(window.jQuery);
