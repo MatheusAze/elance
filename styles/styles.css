@@ -1,0 +1,250 @@
+@charset "UTF-8";
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background: #edeff0;
+    margin-bottom: 260px;
+    /* altura do rodapé */
+}
+
+.bg-conteudo {
+    background: #fff;
+}
+
+.navbar-static-top {
+    margin-bottom: 19px;
+}
+
+.navbar {
+    min-height: 124px;
+}
+
+.navbar .navbar-header {
+    height: 70px;
+}
+
+.navbar .navbar-header .navbar-brand {
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 8px 10px;
+}
+
+.navbar .navbar-header .navbar-brand h1 {
+    margin: 0;
+}
+
+.bsnavbar {
+    margin-bottom: 19px;
+    min-height: 70px;
+    background: rgba(2, 158, 204, 1);
+    border-bottom: 7px solid rgba(1, 99, 127, 1);
+}
+
+.bs-site-container {
+    padding-top: 90px;
+}
+
+.bs-sidebar.affix {
+    position: static;
+}
+
+.bs-sidenav {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.bs-sidebar .nav>li>a {
+    display: block;
+    color: #716b7a;
+    padding: 5px 20px;
+    font-size: 15px
+}
+
+.bs-sidebar .nav>li>a:hover,
+.bs-sidebar .nav>li>a:focus {
+    text-decoration: none;
+    background-color: #edeff0;
+}
+
+.bs-sidebar .nav>.active>a,
+.bs-sidebar .nav>.active:hover>a,
+.bs-sidebar .nav>.active:focus>a {
+    font-weight: bold;
+    color: #2e8bcc;
+    background-color: transparent;
+    border-right: 1px solid #2e8bcc;
+}
+
+.bs-sidebar .nav .nav>li>a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    font-size: 95%;
+}
+
+@media (min-width:992px) {
+    .bs-sidebar .nav>.active>ul {
+        display: block;
+    }
+    .bs-sidebar.affix,
+    .bs-sidebar.affix-bottom {
+        width: 213px;
+    }
+    .bs-sidebar.affix {
+        position: fixed;
+    }
+    .bs-sidebar.affix-bottom {
+        position: absolute;
+    }
+    .bs-sidebar.affix-bottom .bs-sidenav,
+    .bs-sidebar.affix .bs-sidenav {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+
+/* Large desktop */
+
+@media (min-width: 1200px) {
+    .bs-site-container {
+        margin-top: 0px;
+    }
+    .bs-sidebar.affix-bottom,
+    .bs-sidebar.affix {
+        width: 263px;
+    }
+}
+
+/* resizing */
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .bs-site-container {
+        margin-top: 50px;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .bs-site-container {
+        margin-top: 100px;
+    }
+    
+    body {
+        margin-bottom: 340px;
+    }
+    
+    footer {
+        height: 320px;
+    }
+}
+
+
+/* Landscape phone to portrait tablet */
+
+@media (max-width: 767px) {
+    .bs-site-container {
+        margin-top: 0px;
+    }
+    
+    body {
+        margin-bottom: 350px;
+    }
+    .pre-footer {
+        width: 100%;
+    }
+    footer {
+        height: 400px;
+    }
+    .bs-footer {
+        text-align: left;
+    }
+    .bs-footer p {
+        margin-bottom: 0;
+    }
+}
+
+
+/* Landscape phones and down */
+
+@media (max-width: 480px) {
+    .bs-site-container {
+        margin-top: 0px;
+    }
+}
+
+.leilao-call h3 {
+    margin: 10px 0 10px;
+}
+
+.leilao-call .leilao-ver-mais a {
+    margin: 7px 15px 0px 0px;
+    float: right;
+}
+
+.leilao-call .lista-leiloes {
+    width: 100%;
+    margin: 0px;
+}
+
+.leilao-call .lista-leiloes .imagem {
+    /*border: 1px solid #edeff0;*/
+}
+
+.leilao-call .lista-leiloes .detalhes {
+    padding: 5px 0 10px 5px;
+}
+
+.leilao-call .lista-leiloes .detalhes p {
+    margin: 0px;
+}
+
+.pre-footer {
+    position: absolute;
+    bottom: 60px;
+    /* altura do rodapé */
+}
+
+.pre-footer>div.col-md-5 {
+    padding: 20px 0 10px;
+}
+
+.pre-footer #assine_newsletter #form_newsletter {
+    margin: 20px 0;
+    width: 100%;
+}
+
+footer {
+    height: 260px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.bs-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: #5e5e5e;
+}
+
+.bs-footer p {
+    color: #d2d2d2;
+    text-align: center;
+    padding: 20px;
+    margin: 0px;
+}
+
+.bs-footer p a {
+    font-weight: bold;
+    color: #d2d2d2;
+}

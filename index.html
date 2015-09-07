@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>e-Lance.co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de leilões on-line">
+    <meta name="author" content="e-Lance.co">
+    <!-- Le styles -->
+    <link rel="stylesheet" type="text/css" href="dist/css/metro-bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/font-awesome.min.css">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- eLance styles -->
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top bsnavbar">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/e-lance.png" alt="e-Lance" />
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <!-- li  class="active" -->
+                        <li><a href="#">Minha Conta</a></li>
+                        <li><a href="#">Como Participar</a></li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Atendimento <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+
+                    <form class="navbar-form navbar-left" role="search">
+
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Faça sua busca">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Buscar</button>
+                          </span>
+                        </div>
+
+                        <!--
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <button type="submit" class="btn btn-default"></button>
+-->
+                    </form>
+
+                    <ul class="nav navbar-nav">
+                        <!-- li  class="active" -->
+                        <li><a href="#">Cadastre-se</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entrar <b class="caret"></b></a>
+                            <ul class="dropdown-menu" style="min-width: 240px;">
+                                <li>
+                                    <form class="navbar-form navbar-left" role="login" style="width: 100%; margin: auto;">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                  <i class="fa fa-fw fa-user"></i>
+                              </span>
+                                            <input type="text" class="form-control" placeholder="Login">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-fw fa-key"></i>
+                                            </span>
+                                            <input type="password" class="form-control" placeholder="Senha">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary navbar-right">Entrar <i class="fa fa-sign-in"></i></button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container bs-site-container">
+        <div class="row">
+            <div class="col-md-2">
+
+                <div class="bs-sidebar hidden-print affix-top bg-conteudo" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li>
+                            <a href="#tiles">Leilões</a>
+                            <ul class="nav">
+                                <li><a href="#"><i class="fa fa-fw fa-1x fa-car"></i> Veiculos</a></li>
+                                <li><a href="#"><i class="fa fa-fw fa-1x fa-home"></i> Imóveis</a></li>
+                                <li><a href="#"><i class="fa fa-fw fa-1x fa-gear"></i> Materiais</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#dropdowns">Últimos Lotes</a>
+                        </li>
+                        <li>
+                            <a href="#btn-groups">Perfil</a>
+                        </li>
+                        <li>
+                            <a href="#btn-dropdowns">Dashboard</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10" role="main">
+                <div class="row">
+                    <div class="bg-conteudo leilao-call">
+                        
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h3>&gt; Leilões de Veículos</h3></div>
+                            <div class="col-md-2 leilao-ver-mais">
+                                <a href="#leilao-veiculos" alt="Leilão de Veículos" class="btn btn-primary">Ver mais...</a>
+                            </div>
+                        </div>
+                        <div class="row lista-leiloes">
+                            <div class="col-md-3">
+                                <div class="imagem">
+                                    <img src="http://lorempixel.com/200/140/business" class="img-thumbnail" />
+                                </div>
+                                <div class="detalhes">
+                                    <p>Leilão 1553 - Sucata</p>
+                                    <p>01/08/2015 - 09:00</p>
+                                    <p>São Paulo</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="imagem">
+                                    <img src="http://lorempixel.com/200/140/nightlife" class="img-thumbnail" />
+                                </div>
+                                <div class="detalhes">
+                                    <p>Leilão 1554 - Novo</p>
+                                    <p>05/08/2015 - 09:00</p>
+                                    <p>São Paulo</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="imagem">
+                                    <img src="http://lorempixel.com/200/140/people" class="img-thumbnail" />
+                                </div>
+                                <div class="detalhes">
+                                    <p>Leilão 1630 - Semi-novo</p>
+                                    <p>13/08/2015 - 13:00</p>
+                                    <p>Guarulhos</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="imagem">
+                                    <img src="http://lorempixel.com/200/140/animals" class="img-thumbnail" />
+                                </div>
+                                <div class="detalhes">
+                                    <p>Leilão 1352 - Sucata</p>
+                                    <p>15/08/2015 - 15:30</p>
+                                    <p>São Paulo</p>
+                                </div>
+                            </div>
+                        </div> <!-- fim lista-leiloes -->
+                    </div><!-- fim leilao-call -->
+                </div><!-- fim row -->
+                
+                <div class="row">
+                    <div class="bg-conteudo leilao-call">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h3>&gt; Leilões de Imóveis</h3></div>
+                            <div class="col-md-2 leilao-ver-mais">
+                                <a href="#leilao-imoveis" alt="Leilão de Imóveis" class="btn btn-primary">Ver mais...</a>
+                            </div>
+                        </div>
+                        <div class="row lista-leiloes">
+
+                            <div class="col-md-3">
+                                <div class="imagem">
+                                    <img src="http://lorempixel.com/200/140/cats" class="img-thumbnail" />
+                                </div>
+                                <div class="detalhes">
+                                    <p>Leilão 3223 - Mobiliados</p>
+                                    <p>03/08/2015 - 09:30</p>
+                                    <p>Guarujá</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="imagem">
+                                    <img src="http://lorempixel.com/200/140/city" class="img-thumbnail" />
+                                </div>
+                                <div class="detalhes">
+                                    <p>Leilão 3225 - Planta</p>
+                                    <p>09/08/2015 - 17:00</p>
+                                    <p>Santos</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                
+                            </div>
+                            <div class="col-md-3">
+                                
+                            </div>
+                        </div> <!-- fim lista-leiloes -->
+                    </div><!-- fim leilao-call -->
+                </div><!-- fim row -->
+                
+                <div class="row">
+                    <div class="bg-conteudo leilao-call">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h3>&gt; Leilões de Materiais</h3></div>
+                            <div class="col-md-2 leilao-ver-mais">
+                                <a href="#leilao-imoveis" alt="Leilão de Materiais" class="btn btn-primary">Ver mais...</a>
+                            </div>
+                        </div>
+                        <div class="row lista-leiloes">
+
+                            <div class="col-md-3">
+                                <div class="imagem">
+                                    <img src="http://lorempixel.com/200/140/fashion" class="img-thumbnail" />
+                                </div>
+                                <div class="detalhes">
+                                    <p>Leilão 5223 - Smartphones</p>
+                                    <p>02/08/2015 - 09:30</p>
+                                    <p>São Paulo</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="imagem">
+                                    <img src="http://lorempixel.com/200/140/food" class="img-thumbnail" />
+                                </div>
+                                <div class="detalhes">
+                                    <p>Leilão 5470 - Eletrônicos</p>
+                                    <p>03/08/2015 - 10:30</p>
+                                    <p>Jundiaí</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="imagem">
+                                    <img src="http://lorempixel.com/200/140/technics" class="img-thumbnail" />
+                                </div>
+                                <div class="detalhes">
+                                    <p>Leilão 3333 - Smartphones</p>
+                                    <p>01/08/2015 - 11:30</p>
+                                    <p>São Paulo</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                
+                            </div>
+                        </div> <!-- fim lista-leiloes -->
+                    </div><!-- fim leilao-call -->
+                </div><!-- fim row -->
+                
+            </div><!-- fim main -->
+        </div>
+
+
+
+
+
+
+
+        <!-- JS and analytics only. -->
+        <!-- Bootstrap core JavaScript
+================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/elance.js"></script>
+    </div>
+
+    <!-- Footer
+      ================================================== -->
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="container pre-footer bg-conteudo">
+                    <div class="col-md-1" role="main">
+
+                    </div>
+                    <div class="col-md-5" role="main">
+                        <div id="contato">
+                            <h4>Contato</h4>
+                            <p>elance@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-5" role="main">
+                        <div id="assine_newsletter">
+                            <h4>Por favor, insira um e-mail válido</h4>
+                            <form role="newsletter">
+                                <div class="input-group" id="form_newsletter">
+                                    <span class="input-group-addon"><i class="fa fa-fw fa-envelope"></i></span>
+                                    <input type="text" class="form-control" placeholder="E-mail">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary navbar-right">Assine agora</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-1" role="main">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bs-footer">
+            <p>&copy; 2015 by <a href="#e-lance" alt="e-Lance.co">e-Lance</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
